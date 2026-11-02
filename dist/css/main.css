@@ -546,7 +546,7 @@ section {
 .timeline .content {
   width: 100%;
   aspect-ratio: 500/980;
-  background: url("../../assets/images/line_tl_bg.png") no-repeat 50% 0%/70%, linear-gradient(to bottom, #367cb6, #4f9eda, rgba(84, 159, 220, 0.6862745098), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../../assets/images/couple/timeline_bg.jpg") no-repeat 100% 100%/100%;
+  background: url("../../assets/images/line_tl_bg.png") no-repeat 50% 0%/70%, linear-gradient(to bottom, #a8c4dc, #a8c4dc, rgba(145, 190, 226, 0.6862745098), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../../assets/images/couple/timeline_bg.jpg") no-repeat 100% 100%/100%;
   display: flex;
   justify-content: start;
   flex-direction: column;
