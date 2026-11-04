@@ -8,7 +8,7 @@
         width: 100%;
         aspect-ratio: 500 / 750;
         background:
-            url('') no-repeat 50% 63% / 150%,
+            url('../../assets/images/GIF_HOA.gif') no-repeat 50% 7% / 150%,
             url('../../assets/images/couple/hero.jpg') no-repeat center / cover;
         background-color: $title-color;
         display: flex;
@@ -21,7 +21,7 @@
             margin-top: 8%;
 
             img {
-                max-width: 36px;
+                max-width: 90px;
                 width: 100%;
                 height: auto;
             }
@@ -78,7 +78,7 @@
         @media (max-width: 500px) {
             .logo {
                 img {
-                    max-width: calc((36 / 500) * 100vw);
+                    max-width: calc((90 / 500) * 100vw);
                 }
             }
 

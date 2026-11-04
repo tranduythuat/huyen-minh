@@ -110,10 +110,10 @@
 
         .map-img {
             // background-color: $secondary-color;
-            margin: -5% auto;
+            margin: 0% auto;
 
             img {
-                max-width: 408px;
+                max-width: 454px;
                 width: 100%;
                 height: auto;
             }
@@ -170,7 +170,7 @@
 
             .map-img {
                 img {
-                    max-width: calc((408 / 500) * 100vw);
+                    max-width: calc((454 / 500) * 100vw);
                 }
             }
 
