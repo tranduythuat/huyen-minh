@@ -8,7 +8,8 @@
         width: 100%;
         aspect-ratio: 500 / 750;
         background:
-            url('../../assets/images/GIF_HOA.gif') no-repeat 50% 7% / 150%,
+            url('../../assets/images/GIF_HOA.gif') no-repeat 50% 0% / 150%,
+            url('../../assets/images/gif.gif') no-repeat 36% 58%/114%,
             url('../../assets/images/couple/hero.jpg') no-repeat center / cover;
         background-color: $title-color;
         display: flex;
@@ -28,9 +29,9 @@
         }
 
         .couple-name {
-            margin: 0 auto 60%;
+            margin: 0 auto 72%;
             font-family: $font-DK-Cool-Crayonr;
-            font-size: 46px;
+            font-size: 42px;
             color: #f5eddaff;
             transform: rotate(-5deg) translateX(5%);
 
@@ -83,7 +84,7 @@
             }
 
             .couple-name {
-                font-size: calc((46 / 500) * 100vw);
+                font-size: calc((42 / 500) * 100vw);
             }
 
             .date {

@@ -7,10 +7,10 @@
 
     .content {
         width: 100%;
-        aspect-ratio: 500 / 980;
+        aspect-ratio: 500 / 950;
         background:
             url('../../assets/images/line_tl_bg.png') no-repeat 50% 0% / 70%,
-            linear-gradient(to bottom, #a8c4dc, #a8c4dc, #91bee2af, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+            linear-gradient(to bottom, #a8c4dc, #a8c4dc,#a8c4dcdc, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
             url('../../assets/images/couple/timeline_bg.jpg') no-repeat 100% 100% / 100%;
         display: flex;
         justify-content: start;

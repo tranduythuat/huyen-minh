@@ -69,14 +69,13 @@
             perspective: 1000px;
             margin-bottom: 16%;
             position: relative;
-            // left: -3%;
+            left: -3%;
             // background-color: $secondary-color;
             margin: 0 auto;
             margin-bottom: 6%;
 
             img {
-                // max-width: 398px;
-                max-width: 300px;
+                max-width: 398px;
                 width: 100%;
                 height: auto;
             }
@@ -155,8 +154,7 @@
 
             .couple-image {
                 img {
-                    // max-width: calc((362 / 500) * 100vw);
-                    max-width: calc((300 / 500) * 100vw);
+                    max-width: calc((362 / 500) * 100vw);
                 }
             }
 

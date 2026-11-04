@@ -286,7 +286,7 @@ section {
   .hero .content {
     width: 100%;
     aspect-ratio: 500 / 750;
-    background: url("../../assets/images/GIF_HOA.gif") no-repeat 50% 7%/150%, url("../../assets/images/couple/hero.jpg") no-repeat center/cover;
+    background: url("../../assets/images/GIF_HOA.gif") no-repeat 50% 0%/150%, url("../../assets/images/gif.gif") no-repeat 36% 58%/114%, url("../../assets/images/couple/hero.jpg") no-repeat center/cover;
     background-color: #646531ff;
     display: flex;
     justify-content: space-between;
@@ -300,9 +300,9 @@ section {
         width: 100%;
         height: auto; }
     .hero .content .couple-name {
-      margin: 0 auto 60%;
+      margin: 0 auto 72%;
       font-family: "1FTV-VIP-DK-Cool-Crayon", sans-serif;
-      font-size: 46px;
+      font-size: 42px;
       color: #f5eddaff;
       transform: rotate(-5deg) translateX(5%); }
       .hero .content .couple-name span {
@@ -332,7 +332,7 @@ section {
       .hero .content .logo img {
         max-width: calc((90 / 500) * 100vw); }
       .hero .content .couple-name {
-        font-size: calc((46 / 500) * 100vw); }
+        font-size: calc((42 / 500) * 100vw); }
       .hero .content .date .time {
         font-size: calc((16 / 500) * 100vw); }
       .hero .content .date .divider img {
@@ -375,10 +375,11 @@ section {
       perspective: 1000px;
       margin-bottom: 16%;
       position: relative;
+      left: -3%;
       margin: 0 auto;
       margin-bottom: 6%; }
       .invite .content .couple-image img {
-        max-width: 300px;
+        max-width: 398px;
         width: 100%;
         height: auto; }
     .invite .content .time {
@@ -429,7 +430,7 @@ section {
         .invite .content .couple-name {
           font-size: calc((33 / 500) * 100vw); }
         .invite .content .couple-image img {
-          max-width: calc((300 / 500) * 100vw); }
+          max-width: calc((362 / 500) * 100vw); }
         .invite .content .time {
           font-size: calc((26 / 500) * 100vw); }
         .invite .content .location {
@@ -446,8 +447,8 @@ section {
   width: 100%; }
   .timeline .content {
     width: 100%;
-    aspect-ratio: 500 / 980;
-    background: url("../../assets/images/line_tl_bg.png") no-repeat 50% 0%/70%, linear-gradient(to bottom, #a8c4dc, #a8c4dc, #91bee2af, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../../assets/images/couple/timeline_bg.jpg") no-repeat 100% 100%/100%;
+    aspect-ratio: 500 / 950;
+    background: url("../../assets/images/line_tl_bg.png") no-repeat 50% 0%/70%, linear-gradient(to bottom, #a8c4dc, #a8c4dc, #a8c4dcdc, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../../assets/images/couple/timeline_bg.jpg") no-repeat 100% 100%/100%;
     display: flex;
     justify-content: start;
     flex-direction: column;
