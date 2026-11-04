@@ -600,18 +600,19 @@
        RSVP
     ====================================================== */
 
-  async function handleFormSubmit(e, lang = "vi") {
+  async function handleFormSubmit(e, lang = "vi", sheet = "nha-trai") {
     e.preventDefault();
 
     // Prevent duplicate submit
     if (isSubmitting) { return; }
 
-    const form = document.forms["rsvpForm"];
+    const form = e.target;
 
-    if (!form) {
-      console.error("RSVP form not found");
-      return;
-    }
+
+    // if (!form) {
+    //   console.error("RSVP form not found");
+    //   return;
+    // }
 
     // =========================
     // i18n Messages
@@ -645,14 +646,14 @@
     isSubmitting = true;
 
     // Disable submit button
-    const submitButton = form.querySelector('button[type="submit"], input[type="submit"]');
-    if (submitButton) {
-      submitButton.disabled = true;
-      submitButton.dataset.originalText = submitButton.textContent;
-      if (submitButton.tagName === "BUTTON") {
-        submitButton.textContent = t.sendingTitle;
-      }
-    }
+    // const submitButton = form.querySelector('button[type="submit"], input[type="submit"]');
+    // if (submitButton) {
+    //   submitButton.disabled = true;
+    //   submitButton.dataset.originalText = submitButton.textContent;
+    //   if (submitButton.tagName === "BUTTON") {
+    //     submitButton.textContent = t.sendingTitle;
+    //   }
+    // }
 
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
@@ -661,9 +662,6 @@
       name,
       confirm,
       guest_number,
-      phone,
-      address,
-      food,
       wish,
     } = data;
 
@@ -680,14 +678,14 @@
       didOpen: () => Swal.showLoading(),
     });
 
-    const sheetURL = "https://script.google.com/macros/s/AKfycbxVhxt9nyLTLImzLFYQo9dvHiIDDqRWEgr8Ppr8Tiylit41idZvA0TvkE2P_Xtgp5EyBg/exec?sheet=confirm";
+    const sheetURL = `https://script.google.com/macros/s/AKfycbyCIpKC8cBEyrsJEREEYJnXy9drCafq23vbLVNvQ0-_kWB5UlH2jWjbnGGbgYqQDsck/exec?sheet=${sheet}`;
 
     const controller = new AbortController();
 
     const timeout = setTimeout(() => { controller.abort(); }, 15000);
 
     try {
-      const body = new URLSearchParams({ name, confirm, guest_number, phone, address, food, wish, });
+      const body = new URLSearchParams({ name, confirm, guest_number, wish, });
       const res = await fetch(sheetURL, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8", },
@@ -741,19 +739,23 @@
       });
     } finally {
       isSubmitting = false;
-      if (submitButton) {
-        submitButton.disabled = false;
-        if (submitButton.tagName === "BUTTON") {
-          submitButton.textContent = submitButton.dataset.originalText || "Submit";
-        }
-      }
+      // if (submitButton) {
+      //   submitButton.disabled = false;
+      //   if (submitButton.tagName === "BUTTON") {
+      //     submitButton.textContent = submitButton.dataset.originalText || "Submit";
+      //   }
+      // }
     }
   }
 
   function initRSVP() {
     const form = document.forms["rsvpForm"];
+    const formNhaTrai = document.forms["rsvpFormNhaTrai"];
     if (form) {
-      form.addEventListener("submit", (e) => handleFormSubmit(e, "en"));
+      form.addEventListener("submit", (e) => handleFormSubmit(e, "vi", "nha-gai"));
+    }
+    if (formNhaTrai) {
+      formNhaTrai.addEventListener("submit", (e) => handleFormSubmit(e, "vi", "nha-trai"));
     }
   }
 
